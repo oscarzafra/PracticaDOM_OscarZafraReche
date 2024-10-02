@@ -1,53 +1,85 @@
+/* Estilos generales */
 * {
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
 }
 
 header {
     display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    
+    padding: 20px;
+    background-color: #000000; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    position: sticky; /* Hace que el header sea sticky */
+    top: 0; /* Para que el header quede siempre visible */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 
-header > img {
-    width: 200px;
-    height: 100px;
-}
-
-nav > li {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    margin-right: 30px;
-    
-}
-
-header > ul > li > a:hover {
-    color: red;
-}
-
-#products-container {
-    color: black;
-}
-
-.product.img {
-    width: 150px;
+header img {
+    width: 150px; /* Tamaño del logo */
     height: auto;
+    margin-right: 50px;
 }
 
+/* Estilos del nav */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Espaciado entre los elementos del nav */
+}
 
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff; /* Color oscuro para el texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+    font-weight: bold;
+    position: relative; /* Necesario para el efecto dinámico */
+}
 
+/* Efecto hover */
+nav ul li a:hover {
+    color: #e63946; /* Cambia el color al pasar el ratón */
+}
+
+/* Línea animada debajo del enlace al hacer hover */
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #e63946; /* Rojo para la línea */
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Anima la línea para que aparezca completamente */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}

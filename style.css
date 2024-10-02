@@ -1,85 +1,257 @@
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
+*{
+    text-decoration: none;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    
 }
+
 
 header {
     display: flex;
-    justify-content: space-between; 
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #000000; /* Fondo blanco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-    position: sticky; /* Hace que el header sea sticky */
-    top: 0; /* Para que el header quede siempre visible */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    background-color: rgb(0, 0, 0);
+    
+    
+}
+
+ nav, li {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 80px;
+   
+    
 }
 
 header img {
-    width: 150px; /* Tamaño del logo */
+    width: 150px; 
     height: auto;
     margin-right: 50px;
+    padding: 10px;
 }
 
-/* Estilos del nav */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px; /* Espaciado entre los elementos del nav */
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #ffffff; /* Color oscuro para el texto */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
-    font-weight: bold;
-    position: relative; /* Necesario para el efecto dinámico */
-}
-
-/* Efecto hover */
 nav ul li a:hover {
-    color: #e63946; /* Cambia el color al pasar el ratón */
+    color: #a9fd65; 
 }
 
-/* Línea animada debajo del enlace al hacer hover */
-nav ul li a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: #e63946; /* Rojo para la línea */
-    transition: width 0.3s ease;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
 }
 
-nav ul li a:hover::after {
-    width: 100%; /* Anima la línea para que aparezca completamente */
+.search-form input {
+    padding: 8px 15px;
+    border: 2px solid #000;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 200px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
+.search-form input:focus {
+    border-color: #a9fd65; 
+    width: 250px;
 }
+
+.search-form button {
+    padding: 8px 15px;
+    background-color: #000;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-form button:hover {
+    background-color: #a9fd65; 
+    color: #000;
+}
+
+
+.portada {
+    background-image: url(https://www.lavanguardia.com/files/og_thumbnail/uploads/2022/01/17/61e57183d0081.jpeg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.portada-texto {
+    position: absolute; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.portada-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.portada-texto p {
+    font-size: 1.5rem;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-bottom: 2px solid #ddd;
+}
+
+.filter-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #a9fd65;
+    
+}
+
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5; 
+}
+
+.product-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    background-color: #444; 
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white; 
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0 20px;
+}
+
+.footer-links, .footer-social {
+    flex: 1; 
+    margin: 0 20px; 
+}
+
+.footer-links h2, .footer-social h2 {
+    border-bottom: 2px solid #a9fd65; 
+    padding-bottom: 10px; 
+}
+
+.footer-links ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+.footer-links ul li {
+    margin: 10px 0; 
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #a9fd65; 
+    transition: color 0.3s; 
+}
+
+.footer-links ul li a:hover {
+    color: white; 
+}
+
+.footer-social {
+    text-align: center; 
+}
+
+.social-icons a {
+    margin: 0 10px; 
+}
+.social-icons img {
+    width: 30px; 
+    height: auto; 
+}
+
+.footer-bottom {
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 0.9rem; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

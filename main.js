@@ -5,6 +5,7 @@ const products = [
       stars: 5,
       reviews: 2468,
       seller: 'Nike',
+      gender: 'Hombre',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/AIR+FORCE+1+%2707.png'
     },
   
@@ -14,6 +15,7 @@ const products = [
       stars: 4,
       reviews: 502,
       seller: 'Nike',
+      gender: 'Mujer',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/877d30e7-4880-46f8-aa71-6704eb7d944d/AIR+MAX+PLUS.png'
     },
 
@@ -23,6 +25,7 @@ const products = [
       stars: 5,
       reviews: 89,
       seller: 'Nike',
+      gender: 'Hombre',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/aqcdmfttkq4cuvv9nuwx/AIR+MAX+PLUS+III.png'
     },
 
@@ -32,6 +35,7 @@ const products = [
       stars: 5,
       reviews: 31,
       seller: 'Nike',
+      gender: 'Mujer',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/c433a467-8480-4938-bbf7-1d229fe606a4/WMNS+NIKE+P-6000.png'
     },
 
@@ -41,6 +45,7 @@ const products = [
       stars: 4,
       reviews: 99,
       seller: 'Nike',
+      gender: 'Hombre',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/8bd40f1c-94cb-4319-8161-37a3fdd93698/NIKE+CORTEZ.png'
     },
 
@@ -50,6 +55,7 @@ const products = [
       stars: 5,
       reviews: 870,
       seller: 'Nike',
+      gender: 'Mujer',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4f864b95-0da2-4f66-b1c7-2cfb6e655bc6/AIR+JORDAN+1+MID.png'
     },
 
@@ -59,6 +65,7 @@ const products = [
       stars: 5,
       reviews: 15,
       seller: 'Nike',
+      gender: 'Hombre',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/0f8506d4-c41a-438d-84c5-fbe971fca4c1/NIKE+DUNK+LOW+RETRO+SE.png'
     },
 
@@ -68,6 +75,7 @@ const products = [
       stars: 4,
       reviews: 180,
       seller: 'Nike',
+      gender: 'Mujer',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/0d1124c5-5232-4eaf-afee-c221ceb5eb6f/NIKE+ZOOMX+ZEGAMA+TRAIL+2.png'
     },
 
@@ -77,6 +85,7 @@ const products = [
       stars: 5,
       reviews: 35,
       seller: 'Nike',
+      gender: 'Hombre',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/8937af70-c95a-4886-91f4-3ce7c86f5bc4/PHANTOM+GX+II+ELITE+FG.png'
     },
 
@@ -86,6 +95,7 @@ const products = [
       stars: 5,
       reviews: 350,
       seller: 'Nike',
+      gender: 'Mujer',
       image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/77874acd-bf25-4037-bf21-9b442d1b28eb/NIKE+VICTORI+ONE+SLIDE.png'
     },
 
@@ -104,9 +114,13 @@ function renderProducts(products) {
             <p>Precio: $${product.price}</p>
             <p>Calificación: ${product.stars} estrellas (${product.reviews} reseñas)</p>
             <p>Vendedor: ${product.seller}</p>
+            <p>${product.gender}</p>
         `
     productsContainer.appendChild(productCard);
   });
 }
 
 renderProducts(products);
+
+
+

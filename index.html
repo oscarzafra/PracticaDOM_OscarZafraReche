@@ -26,19 +26,59 @@
                 <li><a href="#">Deporte</a></li>
             </ul>
         </nav>
+        <form class="search-form" id="search-form">
+            <input type="text" id="search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <button type="submit">Buscar</button>
+        </form>
     </header>
 
     <main>
-        <div id ="products-container"></div>
+        <section>
+            <div class="portada"></div>
+                <div class="portada-texto">
+                    <h1>JUST DO IT</h1>
+                    <p>Bienvenido a Nike, en esta página podrás encontrar los mejores productos deportivos</p>
+                </div>
+        </section>
+        <section>
+            <div class="filter-bar">
+                <button class="filter-btn" data-filter="hombre">Hombre</button>
+                <button class="filter-btn" data-filter="mujer">Mujer</button>
+                <button class="filter-btn" data-filter="precio-alto">Precio más alto</button>
+                <button class="filter-btn" data-filter="precio-bajo">Precio más bajo</button>
+                <button class="filter-btn" data-filter="calificacion">Mejor calificación</button>
+            </div>
+            <div id = "products-container"></div>
+            <div id = "product-card"></div>
+        </section>
+       
     </main>
 
     <footer>
-        <ul>
-            <li>Contacto</li>
-            <li>Control Parental</li>
-            <li>Redes Sociales</li>
-            <li>Empleo</li>
-        </ul>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h2>Enlaces útiles</h2>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Control Parental</a></li>
+                    <li><a href="#">Redes Sociales</a></li>
+                    <li><a href="#">Empleo</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h2>Síguenos</h2>
+                <div class="social-icons">
+                    <a href="#"><img src="DOMimages/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="DOMimages/x-icon.png" alt="X"></a>
+                    <a href="#"><img src="DOMimages/instagram-icon.webp" alt="Instagram"></a>
+                    <a href="#"><img src="DOMimages/youtube-icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nike. Todos los derechos reservados.</p>
+        </div>
     </footer>
+    
 </body>
 </html>
